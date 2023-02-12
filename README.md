@@ -1,2 +1,2 @@
 # Interview-Questions
-Python Question and Answer
+This repository contains all the important most frequestly asked question about the python language
