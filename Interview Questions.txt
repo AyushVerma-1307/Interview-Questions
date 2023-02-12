@@ -1,0 +1,150 @@
+1.What is constructor in python?
+Ans.In Python, a constructor is a special method that is automatically called when 
+an object of a class is created. It is used to initialize the attributes of the 
+object and set the default values for those attributes. The constructor is defined 
+using the '__init__' method and is the first method that is called when an object is 
+created. The '__init__' method takes the self parameter, which refers to the object 
+being created, and any other required parameters. The values of the parameters are 
+then used to initialize the attributes of the object. By using a constructor, you 
+can ensure that every object of the class is properly initialized and set up with 
+default values. This can simplify the process of creating and managing objects in 
+your code.
+
+2.What is destructor in python.
+Ans.In Python, there is no concept of a destructor like in some other programming 
+languages. However, there is a __del__ method that is sometimes referred to as a 
+destructor. The __del__ method is automatically called when an object is no longer 
+referenced and is about to be destroyed.However, it's important to note that the 
+__del__ method is not a reliable mechanism for managing resources in Python. 
+It's not guaranteed to be called at a specific time and its behavior can be 
+affected by the state of the Python interpreter. Additionally, the __del__ 
+method can't be relied upon for releasing resources such as file handles, 
+sockets, or database connections, because it may be called after the interpreter 
+has started the process of shutting down.For these reasons, it's generally 
+recommended to use the with statement or a context manager to manage resources 
+in Python, rather than relying on the __del__ method.
+
+3.Explain the magic method.
+Ans.In Python, magic methods (also known as "dunder" methods, short for "double underscore") 
+are special methods that have double underscores at the beginning and end of their names. 
+These methods are used to define the behavior of objects in Python, and they are called 
+automatically in response to specific events or operations.
+Some of the most commonly used magic methods include:
+__init__: A constructor method that is called when an object of the class is created. 
+It is used to initialize the object's state.
+
+__str__: A method that returns a string representation of the object. 
+It is used to define what a string representation of the object should look like.
+
+__len__: A method that returns the length of the object. 
+It is used to define the length of objects that have a notion of length.
+
+__del__: A destructor method that is called when an object is about to be destroyed. 
+It is used to clean up any resources used by the object.
+
+These are just a few examples of magic methods in Python. 
+There are many other magic methods available, and they can be used to define a wide variety of 
+behaviors for objects in Python. When writing classes, you can use magic methods to define custom 
+behavior for your objects, making it easier to work with them in a consistent and intuitive way.
+
+4.Differentiate between old class style and new class style.
+Ans.In Python, the old-style classes and new-style classes refer to the two different styles of class
+definition that were used in different versions of Python.
+Old-style classes, also known as classic classes, were the only type of classes available in 
+Python versions prior to 2.2. They do not inherit from the built-in object class and do not 
+support some of the advanced features that are available in new-style classes.
+
+New-style classes were introduced in Python 2.2 and are the recommended way to define classes 
+in Python. They inherit from the object class and provide additional features such as better 
+support for subclassing, improved method resolution order, and additional magic methods.
+
+In summary, new-style classes are the recommended way to define classes in Python, as they provide 
+additional features and better support for subclassing compared to old-style classes. If you are 
+using a recent version of Python, it is recommended to use new-style classes in your code.
+
+5.Differentiate between list and tuples (terms of memory).
+Ans.In terms of memory, lists and tuples in Python are two different data structures that have 
+some important differences.
+
+Lists are dynamic arrays, which means that their size can be changed dynamically at runtime.
+When you add or remove elements from a list, Python automatically resizes the list to accommodate 
+the changes. This dynamic nature of lists comes at a cost in terms of memory usage, as 
+Python needs to allocate additional memory to store the list as it grows.
+
+Tuples, on the other hand, are fixed-size arrays. Once a tuple is created, its size cannot be changed.
+ This means that tuples are more memory-efficient than lists, as they do not need to allocate 
+additional memory to accommodate changes.
+
+In terms of memory usage, tuples are generally more efficient than lists, especially when you have 
+large arrays that don't change often. However, lists are more flexible and are often more convenient 
+to use, as they allow you to add or remove elements dynamically.
+
+So, the choice between lists and tuples largely depends on the specific requirements of your 
+program and the trade-off between memory usage and flexibility that you are willing to make. 
+In general, lists are a good choice when you need to store dynamic arrays, while tuples are a 
+good choice when you need to store fixed-size arrays that don't change often.
+
+6.Write a note on session vs cookies.
+Ans.Sessions and cookies are both used to store information about a user's interaction with a 
+web application. The main difference between them is where the data is stored and how long it is kept.
+
+Cookies are small text files stored on the client side, usually in the user's web browser. 
+They are used to store small amounts of data, such as a user's login status, preferences, 
+and shopping cart contents. Cookies are sent back to the server with each request, allowing 
+the server to recognize the user and retrieve the stored information.
+
+Sessions, on the other hand, are stored on the server side and are used to store larger amounts 
+of data, such as user profiles, authentication information, and session-specific data. Unlike 
+cookies, sessions do not store data on the client side, and instead store a unique session ID 
+in a cookie, which is used to look up the corresponding session data on the server.
+
+In summary, cookies are used to store small amounts of data on the client side, while sessions 
+are used to store larger amounts of data on the server side. Both can be used to store information 
+about a user's interaction with a web application, but sessions are more secure and provide more 
+control over the stored data.
+
+7.Where is a cookie stored in the browser.
+Ans.A cookie is stored in the browser's local file system on the client's computer. 
+It is stored as a small text file that is associated with a specific website or domain. 
+The browser uses the information in the cookie to send the cookie data back to the server 
+with each subsequent request to the website. This allows the server to maintain state and 
+persist data across multiple requests from the same client. The location of the cookie files 
+depends on the specific browser and operating system being used, but they are typically stored in a 
+dedicated directory or folder within the browser's local file system.
+
+8.Write the main difference between https and http.
+Ans.HTTP (Hypertext Transfer Protocol) and HTTPS (Hypertext Transfer Protocol Secure) are 
+two protocols used for transmitting data over the internet. The main difference between them is 
+the level of security they provide.
+
+HTTP is a basic, unencrypted protocol that is used to transmit data between a web server and a 
+web browser. When data is transmitted over HTTP, it can be intercepted and read by anyone who has 
+access to the network, making it vulnerable to eavesdropping and tampering.
+
+HTTPS, on the other hand, provides an additional layer of security by encrypting the data that 
+is transmitted between the server and the browser. This means that even if someone intercepts 
+the data, they will not be able to read it without access to the encryption key. 
+HTTPS also uses certificates to verify the identity of the website and prevent man-in-the-middle 
+attacks.
+
+In conclusion, HTTPS is a more secure version of HTTP, and it is recommended for transmitting 
+sensitive information such as passwords and financial data. When a website uses HTTPS, the URL 
+starts with "https" instead of "http" and a padlock icon is displayed in the browser's address bar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
